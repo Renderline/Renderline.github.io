@@ -4,12 +4,125 @@
     <title>Renderline V0</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="index.d1e980a1.css">
+    <link type="text/css" rel="stylesheet" href="index.d93702bf.css">
     <!-- <link rel="stylesheet" href=".scss"> -->
 </head>
 
 <body>
-    <script type="module" src="index.72839a6c.js"></script>
+    <div id="home">
+        <div class="logo-client">
+            <a href="https://www.ecologie.gouv.fr/direction-generale-laviation-civile-dgac">
+                <img class="logo-dsna" src="Logo_DSNA.8c3e7082.jpg" alt="Logo DSNA">
+            </a>
+            <a href="https://www.enac.fr/fr">
+                <img class="logo-enac" src="logo_rf_enac.fbb977ac.jpg" alt="Logo ENAC">
+            </a>
+        </div>
+        <img class="logo" src="logo-RenderLine-without-text-line.73575801.svg" alt="Logo Renderline">
+        <div class="content">
+            <div class="main">
+                <div class="data">
+                    <span>Data</span>
+                    <p>Drag and drop the data you want to use in the area below</p>
+                    <div id="list-data"></div>
+                </div>
+                <div class="json">
+                    <span>Json</span>
+                    <p>Drag and drop the Json configuration file into the area below</p>
+                    <textarea id="json-viewer" cols="num" rows="num">{
+    "title": "Exemple",
+
+    "scene" : {
+
+        "data": [
+            {
+                "name": "WORLD",
+                "information": {
+                    "fileName": "flightData02_lowWeight.csv",
+                    "type": "CSV",
+                    "settings": {
+                        "altitudeFactor": 20
+                    }
+                }
+            }
+        ],
+
+        "objects" : [
+            
+            {
+                "name": "pf1",
+                "information": {
+                    "type": "PointFlow",
+                    "dataName": "WORLD",
+                    "settings": {
+                        "color": "#2247DB",
+                        "opacity": 0.15,
+                        "point_size": 8
+                    }
+                }
+            },
+            
+            {
+                "name": "lines",
+                "information": {
+                    "type": "Lines",
+                    "dataName": "WORLD",
+                    "settings": {
+                        "color": "#2247DB",
+                        "opacity": 0.02,
+                        "bloom": false
+                    }
+                }
+            }
+        ],
+
+        "actions": [
+            
+        ]
+
+    },
+
+    "video": {
+
+        "settings" : {
+            "width": 1920,
+            "height": 1080,
+            "fps": 30,
+            "duration": 20000
+        },
+
+        "cameraMoves": [
+
+            {
+                "timestep": 0,
+                "type": "Jump",
+                "to": { "lat": 30, "long": 0, "alt": 5000000 },
+                "lookAt": "center"
+            },
+            {
+                "timestep": 3000,
+                "type": "Around",
+                "target": { "lat": 90, "long": 0, "alt": 0 },
+                "angle": -360,  
+                "duration": 20000
+            }
+
+        ]
+
+    }
+
+}
+                </textarea>
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="explore" title="Explore your data"><span>🌍</span> Explore</button>
+                <button id="preview" title="Preview before recording (the fps can be different from the rendering)"><span>🎞️</span> Preview</button>
+                <button id="record" title="Start recording"><span>🎥</span> Record</button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="index.a02a29ab.js"></script>
 </body>
 
 </html>

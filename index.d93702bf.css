@@ -1,0 +1,181 @@
+body {
+	margin: 0;
+	overflow: hidden;
+}
+
+#home {
+	font-family: Helvetica, sans_serif; 
+	background-color: #38618C;
+	height: 100vh;
+	width: 100vw;
+	display: block;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.logo-client {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	/* display: flex;
+	flex-direction: row; */
+}
+
+.logo-enac {
+	height: 50px;
+	cursor: pointer;
+}
+
+.logo-dsna {
+	height: 50px;
+	cursor: pointer;
+}
+
+.logo {
+	/* background-color: #ffffff;
+	width: 100%;  */
+	height: 25vh; 
+}
+
+.content {
+	height: 70vh;
+	width: 80vw; 
+}
+
+.main {
+	height: calc( 100% - 70px); 
+	width: 100%; 
+	display: flex;
+	flex-direction: row;
+	/* align-items: center; */
+	justify-content: space-between;
+}
+
+.main span {
+	color: white;
+	position: relative;
+	font-size: 2em;
+}
+
+.main span::after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0%;
+	width: 40px;
+	height: 2px;
+	background-color: #FFC766;
+}
+
+.main p {
+	color: white;
+	position: relative;
+	font-size: 1em;
+}
+
+.data {
+	height: 100%; 
+	width: 30vw;
+}
+
+#list-data{
+	margin-top: 20px;
+	height: calc( 100% - 130px); 
+	width: calc( 100% - 20px);
+}
+
+#json-viewer {
+	color: white;
+	margin-top: 5px;
+	height: calc( 100% - 110px); 
+	width: calc( 100% - 0px);
+	resize: none;
+}
+
+#list-data, #json-viewer {
+	position: relative;
+	background-color: #2a435e80;
+	border: solid 1px #2A435E;
+	overflow-x: hidden;
+	padding: 10px;
+	overflow-y: auto;
+}
+
+#list-data:hover {
+	background: linear-gradient(45deg, #2A435E 12.5%, #2a435e80 12.5%, #2a435e80 37.5%, #2A435E 37.5%, #2A435E 62.5%, #2a435e80 62.5%, #2a435e80 87.5%, #2A435E 87.5%);
+	background-size: 25px 25px;
+	/* background-position: 50px 50px; */
+	/* background-color: #FFC766; */
+}
+
+#list-data:hover::before {
+	color: white;
+	font-size: 1.1em;
+	content: 'Drag And drop your Data';
+	position: absolute;
+	bottom: calc( 50% - 12px );
+	left: calc( 50% - 95px );
+}
+
+.data-item {
+	position: relative;
+	color: white;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.data-item::before {
+	content: '';
+	position: absolute;
+	left: -10px;
+	top: 6px;
+	width: 6px;
+	height: 6px;
+	background-color: #fff;
+	border-radius: 50%;
+}
+/* 
+#json-viewer:hover::before {
+	color: white;
+	font-size: 1.1em;
+	content: 'Drag And drop your Configuration File';
+	position: absolute;
+	bottom: calc( 50% - 12px );
+	left: calc( 50% - 145px );
+} */
+
+.json {
+	height: 100%; 
+	width: 45vw;
+}
+
+.buttons {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: end;
+}
+
+.buttons button {
+	border: none;
+	cursor: pointer;
+	margin-left: 10px;
+	height: 55px;
+	width: 85px;
+	border-radius: 5px;
+	font-size: 1.2rem;
+	transition: all 0.3s;
+	box-shadow: rgba(0, 0, 0, 0.65) 0px 2px 5px;
+}
+
+.buttons button:hover {
+	box-shadow: rgba(0, 0, 0, 0.65) 0px 5px 9px;
+}
+
+.buttons button:active {
+	box-shadow: rgba(0, 0, 0, 0.65) 0px 1px 3px;
+}
+/*# sourceMappingURL=index.d93702bf.css.map */

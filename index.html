@@ -4,7 +4,7 @@
     <title>Renderline V0</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="index.a65734bd.css">
+    <link type="text/css" rel="stylesheet" href="index.02a40af7.css">
     <!-- <link rel="stylesheet" href=".scss"> -->
 </head>
 
@@ -22,13 +22,31 @@
         <div class="content">
             <div class="main">
                 <div class="data">
-                    <span>Data</span>
+                    <span id="title">Data</span>
                     <p>Drag and drop the data you want to use in the area below</p>
                     <div id="list-data"></div>
                 </div>
                 <div class="json">
-                    <span>Json</span>
-                    <p>Drag and drop the Json configuration file into the area below</p>
+                    <span id="title">Json</span>
+                    <div class="json-head">
+                        <p>Drag and drop the Json configuration file into the area below</p>
+                        <button id="download-json" title="Download the configuration file">
+                            <span>
+                                <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1080 1080" width="20" height="20">
+                                    <style>.s0 {
+  fill: #000;
+}
+
+</style>
+                                    <g id="Layer 1">
+                                        <path id="Forme 1" fill-rule="evenodd" class="s0" d="m966.9 483.6l-426.9 372.3-426.9-372.3z"></path>
+                                        <path id="Forme 2" fill-rule="evenodd" class="s0" d="m455 27h167.7v672.5h-167.7z"></path>
+                                        <path id="Forme 3" fill-rule="evenodd" class="s0" d="m0 948.4h1080v131.6h-1080z"></path>
+                                    </g>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
                     <textarea id="json-viewer" cols="num" rows="num">{
     "title": "Exemple",
 
@@ -112,7 +130,7 @@
     }
 
 }
-                </textarea>
+                    </textarea>
                 </div>
             </div>
             <div class="buttons">
@@ -120,10 +138,13 @@
                 <button id="preview" title="Preview before recording (the fps can be different from the rendering)"><span>🎞️</span> Preview</button>
                 <button id="record" title="Start recording"><span>🎥</span> Record</button>
             </div>
+            <a id="help-button" href="https://renderline.github.io/docs/" title="Documentation">
+                <span>?</span>
+            </a>
         </div>
     </div>
     <div id="render_state"></div>
-    <script type="module" src="index.1102ae6f.js"></script>
+    <script type="module" src="index.c1e59864.js"></script>
 </body>
 
 </html>
